@@ -1,0 +1,21 @@
+.btn {
+  background-color: #fbc443;
+  justify-content: center;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 2rem;
+  border-radius: 0.5rem;
+  &.--nav {
+    height: 4rem;
+    font-weight: 700;
+    width: 14rem;
+  }
+  &.--hero {
+    font-weight: 500;
+    height: 6rem;
+    align-self: center;
+    width: 28rem;
+  }
+}
