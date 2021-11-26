@@ -16,6 +16,7 @@ html {
   margin-right: auto;
   padding-left: 2rem;
   padding-right: 2rem;
+  height: 100%;
 }
 nav {
   padding: 2rem 2rem;
@@ -26,8 +27,12 @@ nav {
     font-weight: 700;
     font-size: 2.4rem;
     text-transform: uppercase;
+    &:hover {
+      filter: brightness(0);
+      transition: 0.3s;
+    }
   }
-  .div-teste {
+  .nav-left {
     display: flex;
     justify-content: space-between;
     gap: 4rem;
@@ -54,14 +59,24 @@ img {
   width: 20rem;
 }
 .section-hero {
-  position: relative;
-  display: flex;
-  flex-direction: column;
   z-index: 1;
   text-align: center;
   height: 70rem;
-  justify-content: center;
   width: 100%;
+  background-image: url("/assets/img/hero-geometric-1.png"),
+    url("/assets/img/hero-geometric-2.png");
+  background-repeat: no-repeat;
+  background-position-y: 1%, 100%;
+  background-position-x: 0%, 100%;
+  background-size: 30%;
+  .content-hero {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   .text-hero {
     gap: 6rem;
     display: flex;
@@ -79,30 +94,7 @@ img {
     font-size: 2rem;
   }
 }
-.section-hero::before {
-  display: flex;
-  position: absolute;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  content: "";
-  z-index: -1;
-  background-image: url("/assets/img/hero-geometric-1.png");
-}
-.section-hero::after {
-  display: flex;
-  bottom: 0;
-  position: absolute;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-  content: "";
-  z-index: -1;
-  right: 0;
-  background-image: url("/assets/img/hero-geometric-2.png");
-}
+
 .cards-special-features {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -110,9 +102,21 @@ img {
   .card-special-features {
     height: 43.6rem;
   }
-  .geometric-special-features {
+  .wraper-special-features {
     background-color: #2c3344;
     height: 27rem;
+    position: relative;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+  .geometric-special-features {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background-color: #fff;
   }
   .content-special-features {
     padding: 2.4rem;
