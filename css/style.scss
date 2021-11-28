@@ -96,7 +96,7 @@ img {
 }
 
 .section-special-features {
-  padding: 10rem;
+  padding: 10rem 0;
   h2 {
     font-size: 3.2rem;
   }
@@ -162,12 +162,13 @@ img {
   }
 }
 .section-testimonial {
+  background-color: #f4f4ed;
   background-image: url("/assets/img/testimonial-geometric.png");
   background-repeat: no-repeat;
   background-position-x: right;
   background-size: 20%;
   background-position-y: bottom;
-  padding: 13rem;
+  padding: 13rem 0;
   .content-testimonial {
     text-align: center;
     display: flex;
@@ -186,5 +187,79 @@ img {
     background-color: #2c3344;
     width: 4rem;
     height: 4rem;
+  }
+}
+.section-blog {
+  padding: 6rem 0;
+  background-color: #f4f4ed;
+
+  .row-1 {
+    display: flex;
+    height: 37rem;
+    p {
+      font-size: 1.4rem;
+    }
+    a {
+      text-decoration: none;
+      font-size: 1.8rem;
+    }
+    p,
+    a,
+    h3 {
+      color: #fff;
+    }
+    h3 {
+      font-size: 4.8rem;
+      font-weight: 400;
+    }
+    .col-1 {
+      background-color: #fbc443;
+      width: 30%;
+    }
+    .post-content {
+      gap: 1.6rem;
+      display: flex;
+      flex-direction: column;
+      max-width: 50rem;
+    }
+    .col-2 {
+      background-color: #2c3344;
+      width: 70%;
+      padding: 5rem 8rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+  .row-2 {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    .card-post {
+      width: 57rem;
+      padding: 5rem;
+      gap: 1.6rem;
+      display: flex;
+      background-color: #fff;
+      flex-direction: column;
+    }
+    h4 {
+      font-size: 2.4rem;
+    }
+    p {
+      font-size: 1.8rem;
+    }
+    a {
+      color: #2c3344;
+      text-decoration: none;
+      font-size: 1.4rem;
+    }
+  }
+}
+.container {
+  &.--blog {
+    gap: 4rem;
+    display: flex;
+    flex-direction: column;
   }
 }
