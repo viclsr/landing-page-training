@@ -13,6 +13,7 @@
   color: #000;
   font-size: 2rem;
   border-radius: 0.5rem;
+  cursor: pointer;
 }
 
 .btn.--nav {
@@ -30,6 +31,11 @@
   width: 28rem;
 }
 
+.btn.--contact {
+  border: none;
+  font-weight: 700;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -45,8 +51,8 @@ html {
 .container {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 8rem;
+  padding-right: 8rem;
   height: 100%;
 }
 
@@ -284,6 +290,11 @@ img {
   padding: 13rem 0;
 }
 
+.section-testimonial.--testimonial-2 {
+  background-color: #fff;
+  background-image: unset;
+}
+
 .section-testimonial .content-testimonial {
   text-align: center;
   display: -webkit-box;
@@ -417,6 +428,78 @@ img {
   font-size: 1.4rem;
 }
 
+.section-contact {
+  padding: 12rem 0;
+}
+
+.section-contact p {
+  text-align: center;
+  margin-bottom: 5rem;
+  font-size: 2rem;
+}
+
+.section-contact form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2.4rem;
+}
+
+.section-contact form .form-inputs {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.6rem;
+}
+
+.section-contact form input,
+.section-contact form button {
+  width: 36rem;
+  border-radius: 0.5rem;
+  padding: 2rem 2.5rem;
+  height: 6rem;
+}
+
+.section-contact form input::-webkit-input-placeholder {
+  color: #2c3344;
+  font-size: 2rem;
+}
+
+.section-contact form input:-ms-input-placeholder {
+  color: #2c3344;
+  font-size: 2rem;
+}
+
+.section-contact form input::-ms-input-placeholder {
+  color: #2c3344;
+  font-size: 2rem;
+}
+
+.section-contact form input::placeholder {
+  color: #2c3344;
+  font-size: 2rem;
+}
+
+.section-contact form input {
+  border: 0.1rem solid #2c3344;
+  outline: 0;
+}
+
+.section-contact form input:hover {
+  border: 0.1rem solid #fbc443;
+}
+
 .container.--blog {
   gap: 4rem;
   display: -webkit-box;
@@ -426,5 +509,79 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+footer {
+  background-image: url("/assets/img/footer-geometric-left.png"), url("/assets/img/footer-geometric-right.png");
+  background-repeat: no-repeat;
+  background-position-y: 100%;
+  background-position-x: 0%, 100%;
+  background-size: 25%;
+}
+
+footer .row-1 {
+  gap: 5rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .row-1 a {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+footer .row-1 .footer-link-logo {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+footer .line {
+  width: 100%;
+  color: #2c3344;
+  border: 0.1rem solid #2c3344;
+}
+
+footer .circles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2.4rem;
+}
+
+footer .circle {
+  width: 4rem;
+  height: 4rem;
+  border: 0.1rem solid #2c3344;
+  border-radius: 50%;
+}
+
+footer .footer-copyright {
+  margin-top: 7rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.2rem;
+}
+
+footer .footer-copyright a,
+footer .footer-copyright p {
+  text-decoration: none;
+  color: #2c3344;
+  font-size: 1.4rem;
+}
+
+footer .row-2 {
+  height: 17rem;
 }
 /*# sourceMappingURL=style.css.map */

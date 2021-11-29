@@ -14,8 +14,8 @@ html {
 .container {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 8rem;
+  padding-right: 8rem;
   height: 100%;
 }
 nav {
@@ -162,6 +162,10 @@ img {
   }
 }
 .section-testimonial {
+  &.--testimonial-2 {
+    background-color: #fff;
+    background-image: unset;
+  }
   background-color: #f4f4ed;
   background-image: url("/assets/img/testimonial-geometric.png");
   background-repeat: no-repeat;
@@ -256,10 +260,99 @@ img {
     }
   }
 }
+.section-contact {
+  padding: 12rem 0;
+  p {
+    text-align: center;
+    margin-bottom: 5rem;
+    font-size: 2rem;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.4rem;
+    .form-inputs {
+      flex-direction: column;
+      display: flex;
+      gap: 1.6rem;
+    }
+    input,
+    button {
+      width: 36rem;
+      border-radius: 0.5rem;
+      padding: 2rem 2.5rem;
+      height: 6rem;
+    }
+    input::placeholder {
+      color: #2c3344;
+      font-size: 2rem;
+    }
+    input {
+      border: 0.1rem solid #2c3344;
+      outline: 0;
+      &:hover {
+        border: 0.1rem solid #fbc443;
+      }
+    }
+  }
+}
 .container {
   &.--blog {
     gap: 4rem;
     display: flex;
     flex-direction: column;
+  }
+}
+footer {
+  background-image: url("/assets/img/footer-geometric-left.png"),
+    url("/assets/img/footer-geometric-right.png");
+  background-repeat: no-repeat;
+  background-position-y: 100%;
+  background-position-x: 0%, 100%;
+  background-size: 25%;
+  .row-1 {
+    gap: 5rem;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    a {
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+    .footer-link-logo {
+      font-size: 2rem;
+      text-transform: uppercase;
+    }
+  }
+  .line {
+    width: 100%;
+    color: #2c3344;
+    border: 0.1rem solid #2c3344;
+  }
+  .circles {
+    display: flex;
+    gap: 2.4rem;
+  }
+  .circle {
+    width: 4rem;
+    height: 4rem;
+    border: 0.1rem solid #2c3344;
+    border-radius: 50%;
+  }
+  .footer-copyright {
+    margin-top: 7rem;
+    justify-content: center;
+    display: flex;
+    gap: 1.2rem;
+    a,
+    p {
+      text-decoration: none;
+      color: #2c3344;
+      font-size: 1.4rem;
+    }
+  }
+  .row-2 {
+    height: 17rem;
   }
 }
