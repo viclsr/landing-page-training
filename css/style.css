@@ -285,7 +285,7 @@ img {
   background-image: url("/assets/img/testimonial-geometric.png");
   background-repeat: no-repeat;
   background-position-x: right;
-  background-size: 20%;
+  background-size: 23%;
   background-position-y: bottom;
   padding: 13rem 0;
 }
@@ -430,6 +430,7 @@ img {
 
 .section-contact {
   padding: 12rem 0;
+  background-color: #f4f4ed;
 }
 
 .section-contact p {
@@ -517,6 +518,7 @@ footer {
   background-position-y: 100%;
   background-position-x: 0%, 100%;
   background-size: 25%;
+  padding-top: 8rem;
 }
 
 footer .row-1 {
@@ -564,7 +566,7 @@ footer .circle {
 }
 
 footer .footer-copyright {
-  margin-top: 7rem;
+  margin-top: 6rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -582,6 +584,96 @@ footer .footer-copyright p {
 }
 
 footer .row-2 {
-  height: 17rem;
+  height: 14rem;
+}
+
+@media screen and (max-width: 1200px) {
+  nav {
+    display: none;
+  }
+  .cards-special-features {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 4rem;
+  }
+  .card-special-features {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card-special-features {
+    width: 26rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .section-blog,
+  .section-contact,
+  .section-special-features,
+  .section-testimonial,
+  .section-hero {
+    padding: 5rem 0;
+  }
+  .section-testimonial,
+  .section-hero {
+    background-image: unset;
+  }
+  .section-hero {
+    height: unset;
+  }
+  .section-hero h1 {
+    font-size: 4rem;
+  }
+  .section-hero .text-hero {
+    gap: 5rem;
+  }
+  .section-special-features p {
+    margin-top: 2rem;
+  }
+  .container {
+    padding: 0 3rem;
+  }
+  .cards-special-features {
+    margin-top: 4rem;
+    gap: 4rem;
+  }
+  .cards-special-features .wraper-special-features {
+    height: 24rem;
+  }
+  .cards-special-features .card-special-features {
+    width: 80%;
+    height: unset;
+  }
+  .section-blog {
+    display: none;
+  }
+  .section-contact form input::-webkit-input-placeholder,
+  .section-contact form button {
+    font-size: 1.6rem;
+  }
+  .section-contact form input:-ms-input-placeholder,
+  .section-contact form button {
+    font-size: 1.6rem;
+  }
+  .section-contact form input::-ms-input-placeholder,
+  .section-contact form button {
+    font-size: 1.6rem;
+  }
+  .section-contact form input::placeholder,
+  .section-contact form button {
+    font-size: 1.6rem;
+  }
+  .section-contact form .form-inputs,
+  .section-contact form input,
+  .section-contact form button {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -170,7 +170,7 @@ img {
   background-image: url("/assets/img/testimonial-geometric.png");
   background-repeat: no-repeat;
   background-position-x: right;
-  background-size: 20%;
+  background-size: 23%;
   background-position-y: bottom;
   padding: 13rem 0;
   .content-testimonial {
@@ -262,6 +262,7 @@ img {
 }
 .section-contact {
   padding: 12rem 0;
+  background-color: #f4f4ed;
   p {
     text-align: center;
     margin-bottom: 5rem;
@@ -311,6 +312,7 @@ footer {
   background-position-y: 100%;
   background-position-x: 0%, 100%;
   background-size: 25%;
+  padding-top: 8rem;
   .row-1 {
     gap: 5rem;
     flex-direction: column;
@@ -341,7 +343,7 @@ footer {
     border-radius: 50%;
   }
   .footer-copyright {
-    margin-top: 7rem;
+    margin-top: 6rem;
     justify-content: center;
     display: flex;
     gap: 1.2rem;
@@ -353,6 +355,83 @@ footer {
     }
   }
   .row-2 {
-    height: 17rem;
+    height: 14rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  nav {
+    display: none;
+  }
+
+  .cards-special-features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+  }
+  .card-special-features {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .card-special-features {
+    width: 26rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .section-blog,
+  .section-contact,
+  .section-special-features,
+  .section-testimonial,
+  .section-hero {
+    padding: 5rem 0;
+  }
+  .section-testimonial,
+  .section-hero {
+    background-image: unset;
+  }
+  .section-hero {
+    height: unset;
+
+    h1 {
+      font-size: 4rem;
+    }
+    .text-hero {
+      gap: 5rem;
+    }
+  }
+  .section-special-features p {
+    margin-top: 2rem;
+  }
+  .container {
+    padding: 0 3rem;
+  }
+  .cards-special-features {
+    margin-top: 4rem;
+    gap: 4rem;
+    .wraper-special-features {
+      height: 24rem;
+    }
+    .card-special-features {
+      width: 80%;
+      height: unset;
+    }
+  }
+  .section-blog {
+    display: none;
+  }
+  .section-contact {
+    form {
+      input::placeholder,
+      button {
+        font-size: 1.6rem;
+      }
+      .form-inputs,
+      input,
+      button {
+        width: 100%;
+      }
+    }
   }
 }
