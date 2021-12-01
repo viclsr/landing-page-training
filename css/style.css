@@ -587,9 +587,21 @@ footer .row-2 {
   height: 14rem;
 }
 
-@media screen and (max-width: 1200px) {
-  nav {
+@media screen and (max-width: 1000px) {
+  .footer-ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header nav {
     display: none;
+  }
+  .section-blog .row-1 h3 {
+    font-size: 4.2rem;
   }
   .cards-special-features {
     display: -webkit-box;
@@ -608,19 +620,54 @@ footer .row-2 {
 }
 
 @media screen and (max-width: 768px) {
-  .card-special-features {
-    width: 26rem;
-  }
-}
-
-@media screen and (max-width: 450px) {
   .section-blog,
   .section-contact,
   .section-special-features,
   .section-testimonial,
-  .section-hero {
+  .section-hero,
+  footer {
     padding: 5rem 0;
   }
+  .card-special-features {
+    width: 26rem;
+  }
+  .section-blog .row-1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 40rem;
+  }
+  .section-blog .row-1 a {
+    font-size: 1.4rem;
+  }
+  .section-blog .row-1 h3 {
+    font-size: 3rem;
+  }
+  .section-blog .row-1 .col-1 {
+    height: 35%;
+  }
+  .section-blog .row-1 .col-2 {
+    padding: 3rem;
+    height: 65%;
+  }
+  .section-blog .row-1 .col-1,
+  .section-blog .row-1 .col-2 {
+    width: 100%;
+  }
+  .section-blog .row-2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .section-blog .row-2 .card-post {
+    width: unset;
+    padding: 3rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
   .section-testimonial,
   .section-hero {
     background-image: unset;
@@ -633,6 +680,18 @@ footer .row-2 {
   }
   .section-hero .text-hero {
     gap: 5rem;
+  }
+  .section-blog .row-2 .card-post {
+    padding: 2rem;
+  }
+  .section-blog .row-2 h4 {
+    font-size: 2rem;
+  }
+  .section-blog .row-2 p {
+    font-size: 1.6rem;
+  }
+  .section-testimonial .paragraph-testimonial {
+    font-size: 2rem;
   }
   .section-special-features p {
     margin-top: 2rem;
@@ -650,9 +709,6 @@ footer .row-2 {
   .cards-special-features .card-special-features {
     width: 80%;
     height: unset;
-  }
-  .section-blog {
-    display: none;
   }
   .section-contact form input::-webkit-input-placeholder,
   .section-contact form button {
@@ -674,6 +730,18 @@ footer .row-2 {
   .section-contact form input,
   .section-contact form button {
     width: 100%;
+  }
+  footer .footer-copyright {
+    margin-top: 4rem;
+  }
+  footer nav {
+    padding: unset;
+  }
+  footer .row-1 {
+    gap: 4rem;
+  }
+  footer .row-2 {
+    height: 4rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

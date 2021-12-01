@@ -358,9 +358,22 @@ footer {
     height: 14rem;
   }
 }
-@media screen and (max-width: 1200px) {
-  nav {
-    display: none;
+@media screen and (max-width: 1000px) {
+  .footer-ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  header {
+    nav {
+      display: none;
+    }
+  }
+  .section-blog {
+    .row-1 {
+      h3 {
+        font-size: 4.2rem;
+      }
+    }
   }
 
   .cards-special-features {
@@ -374,19 +387,50 @@ footer {
   }
 }
 @media screen and (max-width: 768px) {
-  .card-special-features {
-    width: 26rem;
-  }
-}
-
-@media screen and (max-width: 450px) {
   .section-blog,
   .section-contact,
   .section-special-features,
   .section-testimonial,
-  .section-hero {
+  .section-hero,
+  footer {
     padding: 5rem 0;
   }
+  .card-special-features {
+    width: 26rem;
+  }
+  .section-blog {
+    .row-1 {
+      flex-direction: column;
+      height: 40rem;
+      a {
+        font-size: 1.4rem;
+      }
+      h3 {
+        font-size: 3rem;
+      }
+      .col-1 {
+        height: 35%;
+      }
+      .col-2 {
+        padding: 3rem;
+        height: 65%;
+      }
+      .col-1,
+      .col-2 {
+        width: 100%;
+      }
+    }
+    .row-2 {
+      flex-direction: column;
+      .card-post {
+        width: unset;
+        padding: 3rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
   .section-testimonial,
   .section-hero {
     background-image: unset;
@@ -399,6 +443,24 @@ footer {
     }
     .text-hero {
       gap: 5rem;
+    }
+  }
+  .section-blog {
+    .row-2 {
+      .card-post {
+        padding: 2rem;
+      }
+      h4 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1.6rem;
+      }
+    }
+  }
+  .section-testimonial {
+    .paragraph-testimonial {
+      font-size: 2rem;
     }
   }
   .section-special-features p {
@@ -418,9 +480,7 @@ footer {
       height: unset;
     }
   }
-  .section-blog {
-    display: none;
-  }
+
   .section-contact {
     form {
       input::placeholder,
@@ -432,6 +492,20 @@ footer {
       button {
         width: 100%;
       }
+    }
+  }
+  footer {
+    .footer-copyright {
+      margin-top: 4rem;
+    }
+    nav {
+      padding: unset;
+    }
+    .row-1 {
+      gap: 4rem;
+    }
+    .row-2 {
+      height: 4rem;
     }
   }
 }
