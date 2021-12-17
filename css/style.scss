@@ -18,11 +18,32 @@ html {
   padding-right: 8rem;
   height: 100%;
 }
+#btn-mobile {
+  display: none;
+}
+
 nav {
+  background-color: white;
+  position: fixed;
   padding: 2rem 2rem;
   display: flex;
-  justify-content: space-between;
-  h2 {
+  align-items: center;
+  width: 100%;
+  gap: 3rem;
+  .menu-list {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    justify-content: space-between;
+    div {
+      gap: 3rem;
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  .text-logo {
+    width: 23rem;
     color: #fbc443;
     font-weight: 700;
     font-size: 2.4rem;
@@ -32,15 +53,13 @@ nav {
       transition: 0.3s;
     }
   }
-  .nav-left {
-    display: flex;
-    justify-content: space-between;
-    gap: 4rem;
-  }
-  ul {
-    align-content: center;
-    display: flex;
-    gap: 3.2rem;
+  li {
+    a {
+      &:hover {
+        color: #fbc443;
+        text-shadow: 0 1px 1px #ffb3004b;
+      }
+    }
   }
   a {
     text-decoration: none;
@@ -51,7 +70,9 @@ nav {
     display: inline-flex;
     list-style-type: none;
     font-size: 1.8rem;
-    color: #2c3344;
+    color: $dark-blue;
+    transition: 0.3s;
+    text-shadow: 0 1px 1px #2c334417;
   }
 }
 
@@ -116,11 +137,15 @@ img {
   margin-top: 6rem;
   .card-special-features {
     height: 43.6rem;
+    &:hover {
+      .geometric-special-features {
+        transform: rotate(360deg);
+      }
+    }
   }
   .wraper-special-features {
-    background-color: #2c3344;
+    background-color: $dark-blue;
     height: 27rem;
-    position: relative;
     justify-content: center;
     display: flex;
     align-items: center;
@@ -131,13 +156,14 @@ img {
     align-items: center;
     width: 5rem;
     height: 5rem;
+    transition: 0.6s ease-in-out 0s;
     background-color: #fff;
   }
   .geometric-1 {
     border-radius: 0.8rem;
   }
   .geometric-2 {
-    border-radius: 50%;
+    border-radius: 48%;
   }
   .geometric-4 {
     border-radius: 2rem;
@@ -152,12 +178,18 @@ img {
     h3 {
       font-size: 2rem;
       font-weight: 400;
-      color: #2c3344;
+      color: $dark-blue;
     }
     a {
       text-decoration: none;
       font-size: 1.4rem;
-      color: #2c3344;
+      color: $dark-blue;
+      transition: 0.3s;
+      &:hover {
+        color: $yellow;
+        transform: scale(1.1);
+        margin-left: 1rem;
+      }
     }
   }
 }
@@ -188,7 +220,7 @@ img {
   }
   .circle-testimonial {
     border-radius: 50%;
-    background-color: #2c3344;
+    background-color: $dark-blue;
     width: 4rem;
     height: 4rem;
   }
@@ -212,6 +244,11 @@ img {
     h3 {
       color: #fff;
     }
+    a {
+      &:hover {
+        color: $yellow;
+      }
+    }
     h3 {
       font-size: 4.8rem;
       font-weight: 400;
@@ -227,7 +264,7 @@ img {
       max-width: 50rem;
     }
     .col-2 {
-      background-color: #2c3344;
+      background-color: $dark-blue;
       width: 70%;
       padding: 5rem 8rem;
       display: flex;
@@ -254,9 +291,12 @@ img {
       font-size: 1.8rem;
     }
     a {
-      color: #2c3344;
+      color: $dark-blue;
       text-decoration: none;
       font-size: 1.4rem;
+      &:hover {
+        color: $yellow;
+      }
     }
   }
 }
@@ -286,11 +326,11 @@ img {
       height: 6rem;
     }
     input::placeholder {
-      color: #2c3344;
+      color: $dark-blue;
       font-size: 2rem;
     }
     input {
-      border: 0.1rem solid #2c3344;
+      border: 0.1rem solid $dark-blue;
       outline: 0;
       &:hover {
         border: 0.1rem solid #fbc443;
@@ -329,8 +369,8 @@ footer {
   }
   .line {
     width: 100%;
-    color: #2c3344;
-    border: 0.1rem solid #2c3344;
+    color: $dark-blue;
+    border: 0.1rem solid $dark-blue;
   }
   .circles {
     display: flex;
@@ -339,7 +379,7 @@ footer {
   .circle {
     width: 4rem;
     height: 4rem;
-    border: 0.1rem solid #2c3344;
+    border: 0.1rem solid $dark-blue;
     border-radius: 50%;
   }
   .footer-copyright {
@@ -350,8 +390,14 @@ footer {
     a,
     p {
       text-decoration: none;
-      color: #2c3344;
+      color: $dark-blue;
       font-size: 1.4rem;
+    }
+    a {
+      transition: 0.3s;
+      &:hover {
+        color: $yellow;
+      }
     }
   }
   .row-2 {
@@ -364,10 +410,94 @@ footer {
     align-items: center;
   }
   header {
-    nav {
-      display: none;
+    .menu {
+      right: 0;
+      top: 5rem;
+    }
+    .menu-list,
+    .menu-list {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      width: 100%;
+      top: 6rem;
+      right: 0;
+      color: #000;
+      background-color: #fff;
+      transition: 0.5s;
+      z-index: 1000;
+      height: 0;
+      visibility: hidden;
+      overflow-y: hidden;
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+      }
+    }
+    .menu-list {
+      gap: 1.5rem;
+    }
+    .nav-menu.active .menu-list {
+      height: 50rem;
+      visibility: visible;
+      overflow-y: auto;
+    }
+
+    .menu-list a {
+      padding: 1rem 0;
+      margin: 0 1rem;
+    }
+
+    #btn-mobile {
+      display: flex;
+      padding: 0.5rem 2rem;
+      font-size: 1rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      gap: 1.5rem;
+      position: absolute;
+      right: 0;
+      top: 2.5rem;
+    }
+
+    #hamburguer {
+      border-top: 2px solid $dark-blue;
+      width: 30px;
+    }
+
+    #hamburguer::before,
+    #hamburguer::after {
+      content: "";
+      display: block;
+      position: relative;
+      width: 30px;
+      height: 2px;
+      margin-top: 5px;
+      border-top: 5px;
+      background-color: $dark-blue;
+      transition: 0.5s ease;
+    }
+
+    .nav-menu.active #hamburguer {
+      border-top: transparent;
+    }
+
+    .nav-menu.active #hamburguer::before {
+      transform: rotate(135deg);
+    }
+
+    .nav-menu.active #hamburguer::after {
+      transform: rotate(-135deg);
+      top: -7px;
     }
   }
+
   .section-blog {
     .row-1 {
       h3 {
