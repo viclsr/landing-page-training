@@ -67,7 +67,7 @@ html {
   display: none;
 }
 
-nav {
+header nav {
   background-color: white;
   position: fixed;
   padding: 2rem 2rem;
@@ -81,7 +81,7 @@ nav {
   gap: 3rem;
 }
 
-nav .menu-list {
+header nav .menu-list {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -95,7 +95,7 @@ nav .menu-list {
           justify-content: space-between;
 }
 
-nav .menu-list div {
+header nav div {
   gap: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -106,7 +106,7 @@ nav .menu-list div {
           flex-direction: row;
 }
 
-nav .text-logo {
+header nav .text-logo {
   width: 23rem;
   color: #fbc443;
   font-weight: 700;
@@ -114,24 +114,24 @@ nav .text-logo {
   text-transform: uppercase;
 }
 
-nav .text-logo:hover {
+header nav .text-logo:hover {
   -webkit-filter: brightness(0);
           filter: brightness(0);
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
-nav li a:hover {
+header nav li a:hover {
   color: #fbc443;
   text-shadow: 0 1px 1px #ffb3004b;
 }
 
-nav a {
+header nav a {
   text-decoration: none;
 }
 
-nav li,
-nav a {
+header nav li,
+header nav a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -588,13 +588,36 @@ footer .row-1 {
           align-items: center;
 }
 
+footer .row-1 ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .row-1 li {
+  list-style-type: none;
+  text-align: center;
+}
+
 footer .row-1 a {
   font-size: 1.4rem;
+  text-decoration: none;
   font-weight: 700;
+  color: #2c3344;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+footer .row-1 a:hover {
+  color: #fbc443;
 }
 
 footer .row-1 .footer-link-logo {
-  font-size: 2rem;
+  font-size: 2.4rem;
   text-transform: uppercase;
 }
 
@@ -650,7 +673,13 @@ footer .row-2 {
 }
 
 @media screen and (max-width: 1000px) {
-  .footer-ul {
+  header nav .menu-list {
+    gap: 1.5rem;
+  }
+  header nav div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -658,6 +687,7 @@ footer .row-2 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    gap: 1.5rem;
   }
   header .menu {
     right: 0;
@@ -693,27 +723,11 @@ footer .row-2 {
     visibility: hidden;
     overflow-y: hidden;
   }
-  header .menu-list div,
-  header .menu-list div {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    gap: 1.5rem;
-  }
-  header .menu-list {
-    gap: 1.5rem;
-  }
   header .nav-menu.active .menu-list {
     height: 50rem;
     visibility: visible;
     overflow-y: auto;
+    padding: 2.5rem 0;
   }
   header .menu-list a {
     padding: 1rem 0;
@@ -779,6 +793,19 @@ footer .row-2 {
   .card-special-features {
     width: 40%;
   }
+  footer .row-1 .footer-ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 2rem;
+  }
+  footer .row-1 .footer-link-logo {
+    font-size: 1.8rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -836,6 +863,9 @@ footer .row-2 {
   }
   .section-hero {
     height: unset;
+  }
+  .section-hero .content-hero {
+    padding-top: 6rem;
   }
   .section-hero h1 {
     font-size: 4rem;

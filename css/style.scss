@@ -21,58 +21,59 @@ html {
 #btn-mobile {
   display: none;
 }
-
-nav {
-  background-color: white;
-  position: fixed;
-  padding: 2rem 2rem;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  gap: 3rem;
-  .menu-list {
-    width: 100%;
+header {
+  nav {
+    background-color: white;
+    position: fixed;
+    padding: 2rem 2rem;
     display: flex;
     align-items: center;
-    gap: 5rem;
-    justify-content: space-between;
+    width: 100%;
+    gap: 3rem;
+    .menu-list {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 5rem;
+      justify-content: space-between;
+    }
     div {
       gap: 3rem;
       display: flex;
       flex-direction: row;
     }
-  }
-  .text-logo {
-    width: 23rem;
-    color: #fbc443;
-    font-weight: 700;
-    font-size: 2.4rem;
-    text-transform: uppercase;
-    &:hover {
-      filter: brightness(0);
-      transition: 0.3s;
-    }
-  }
-  li {
-    a {
+    .text-logo {
+      width: 23rem;
+      color: #fbc443;
+      font-weight: 700;
+      font-size: 2.4rem;
+      text-transform: uppercase;
       &:hover {
-        color: #fbc443;
-        text-shadow: 0 1px 1px #ffb3004b;
+        filter: brightness(0);
+        transition: 0.3s;
       }
     }
-  }
-  a {
-    text-decoration: none;
-  }
-  li,
-  a {
-    align-items: center;
-    display: inline-flex;
-    list-style-type: none;
-    font-size: 1.8rem;
-    color: $dark-blue;
-    transition: 0.3s;
-    text-shadow: 0 1px 1px #2c334417;
+    li {
+      a {
+        &:hover {
+          color: #fbc443;
+          text-shadow: 0 1px 1px #ffb3004b;
+        }
+      }
+    }
+    a {
+      text-decoration: none;
+    }
+    li,
+    a {
+      align-items: center;
+      display: inline-flex;
+      list-style-type: none;
+      font-size: 1.8rem;
+      color: $dark-blue;
+      transition: 0.3s;
+      text-shadow: 0 1px 1px #2c334417;
+    }
   }
 }
 
@@ -358,12 +359,27 @@ footer {
     flex-direction: column;
     display: flex;
     align-items: center;
+    ul {
+      display: flex;
+      gap: 5rem;
+      align-items: center;
+    }
+    li {
+      list-style-type: none;
+      text-align: center;
+    }
     a {
       font-size: 1.4rem;
+      text-decoration: none;
       font-weight: 700;
+      color: $dark-blue;
+      transition: 0.3s;
+      &:hover {
+        color: $yellow;
+      }
     }
     .footer-link-logo {
-      font-size: 2rem;
+      font-size: 2.4rem;
       text-transform: uppercase;
     }
   }
@@ -405,11 +421,18 @@ footer {
   }
 }
 @media screen and (max-width: 1000px) {
-  .footer-ul {
-    flex-direction: column;
-    align-items: center;
-  }
   header {
+    nav {
+      .menu-list {
+        gap: 1.5rem;
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+      }
+    }
     .menu {
       right: 0;
       top: 5rem;
@@ -432,20 +455,13 @@ footer {
       height: 0;
       visibility: hidden;
       overflow-y: hidden;
-      div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-      }
     }
-    .menu-list {
-      gap: 1.5rem;
-    }
+
     .nav-menu.active .menu-list {
       height: 50rem;
       visibility: visible;
       overflow-y: auto;
+      padding: 2.5rem 0;
     }
 
     .menu-list a {
@@ -515,6 +531,18 @@ footer {
   .card-special-features {
     width: 40%;
   }
+  footer {
+    .row-1 {
+      .footer-ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+      }
+      .footer-link-logo {
+        font-size: 1.8rem;
+      }
+    }
+  }
 }
 @media screen and (max-width: 768px) {
   .section-blog,
@@ -567,7 +595,9 @@ footer {
   }
   .section-hero {
     height: unset;
-
+    .content-hero {
+      padding-top: 6rem;
+    }
     h1 {
       font-size: 4rem;
     }
